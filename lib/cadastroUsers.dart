@@ -16,7 +16,8 @@ class _UserListScreenState extends State<UserListScreen> {
   final TextEditingController tituloController = TextEditingController();
   final TextEditingController firstnameController = TextEditingController();
   final TextEditingController lastnameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController(); // Added for email
+  final TextEditingController emailController =
+      TextEditingController(); // Added for email
   final TextEditingController pictureController = TextEditingController();
 
   @override
@@ -34,20 +35,44 @@ class _UserListScreenState extends State<UserListScreen> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
+          const Text('Cadastro de Usuário', style: TextStyle(fontSize: 28),),
+          const SizedBox(height: 50),
           TextFormField(
-              controller: firstnameController,
-              decoration: const InputDecoration(labelText: 'First Name')),
+            controller: firstnameController,
+            decoration: const InputDecoration(
+              labelText: 'Primeiro Nome',
+              border: OutlineInputBorder(),
+            ),
+          ),
+          const SizedBox(height: 20),
           TextFormField(
-              controller: lastnameController,
-              decoration: const InputDecoration(labelText: 'Last Name')),
+            controller: lastnameController,
+            decoration: const InputDecoration(
+              labelText: 'Ultimo Nome',
+              border: OutlineInputBorder(),
+            ),
+          ),
+          const SizedBox(height: 20),
           TextFormField(
-              controller: emailController, // Added email input field
-              decoration: const InputDecoration(labelText: 'Email')),
+            controller: emailController,
+            decoration: const InputDecoration(
+              labelText: 'Email',
+              border: OutlineInputBorder(),
+            ),
+          ),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: _addUser,
-            child: const Text('Add User'),
-          ),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blue, // Cor de fundo do botão
+            ),
+            child: const Text(
+              'Cadastrar',
+              style: TextStyle(color: Colors.white), // Cor do texto do botão
+            ),
+          )
         ],
       ),
     );

@@ -1,0 +1,10 @@
+^C:\USERS\ALUNO\DOCUMENTS\SONICOZAPDOS\APIFLUTTER\BUILD\WINDOWS\X64\CMAKEFILES\6EF784B2F0874B75BC92E89CF9B9EEAE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Aluno/Documents/sonicozapdos/apiflutter/windows -BC:/Users/Aluno/Documents/sonicozapdos/apiflutter/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Aluno/Documents/sonicozapdos/apiflutter/build/windows/x64/apiflutter.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

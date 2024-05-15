@@ -29,7 +29,7 @@ class _MostrarUsersState extends State<MostrarUsers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User List'),
+        title: const Text('Listagem de Usuários'),
       ),
       body: Column(
         children: [
@@ -63,7 +63,7 @@ class _MostrarUsersState extends State<MostrarUsers> {
               },
             );
           } else {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
         },
       ),
